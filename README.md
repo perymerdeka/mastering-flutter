@@ -15,7 +15,7 @@ sebelum mempelajari Flutter pastikan sudah belajar OOP dengan Dart
 ### Widget Dasar
 
 3. [Text Widget]()
-4. [Row dan Column]()
+4. [Row dan Column](row_column/README.md)
 
 
 ## Referensi dan Sumber Belajar
