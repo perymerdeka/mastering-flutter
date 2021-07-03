@@ -1,4 +1,4 @@
-# row dan Column Widget
+# Row dan Column Widget
 
 widget yang sering digunakan untuk membuat aplikasi Flutter adalah `Row` dan `Column` widget
 
@@ -56,6 +56,11 @@ jika dijalankan hasilnya seperti
 
 `Row` kebalikan dari column klo row menyusun beberapa widget secara horizontal, pemakaianya pun sama dengan
 `Column`
+
+```dart
+widget 1 widget 2 widget 3
+```
+
 
 ```dart
 class MyApp extends StatelessWidget {
