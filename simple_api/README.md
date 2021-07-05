@@ -56,6 +56,8 @@ dan request yang dibutuhkan
 
 maka kita buat factory sesuai response dari API misalnya seperti ini
 
+### Post Method
+
 ```dart
 // factory function
 factory PostResult.createPostResult(Map<String, dynamic> jsonObject) {
@@ -259,6 +261,247 @@ class _MyAppState extends State<MyApp> {
 
 ![hasil](docs/img/res.png)
 
+
+
+### GET Method
+
+pada bahasan sebelumnya kita sudah membuat tentang `POST` method
+
+kita buat model baru berdasarkan mapping json nya
+
+```json
+{
+    "data": {
+        "id": 2,
+        "email": "janet.weaver@reqres.in",
+        "first_name": "Janet",
+        "last_name": "Weaver",
+        "avatar": "https://reqres.in/img/faces/2-image.jpg"
+    },
+    "support": {
+        "url": "https://reqres.in/#support-heading",
+        "text": "To keep ReqRes free, contributions towards server costs are appreciated!"
+    }
+}
+```
+
+disini kita ambil `id`, `first_name`, `last_name` kemudian kita buat modelnya `user_model` dimana isi dari model adalah 
+
+```dart
+class UserModel {
+  final String? id;
+  final String? name;
+
+  // constructor
+  UserModel({this.id, this.name});
+```
+
+patokan untuk membuat model tersebut adalah nilai yang mau diambil dari *Response API nya*
+
+contoh disini menmabil `id` dan `name` aja
+
+kemudian kita membuat `factory method` untuk casting dan parsing json object dan bisa diolah di aplikasi
+flutter kita
+
+```dart
+// factory method
+factory UserModel.createUser(Map<String, dynamic> object) {
+  return UserModel(
+      id: object['id'],
+      name: object['first_name'] + ' ' + object['last_name']);
+}
+```
+
+kemudian kita perlu method untuk request ke API nya kan
+
+```dart
+// get json object and store to model method
+static Future<UserModel> connectToAPI(String id) async {
+  // API URL
+  String apiURL = "https://reqres.in/api/users/" + id;
+  var getResult = await http.get(Uri.parse(apiURL));
+  var jsonObject = json.decode(getResult.body);
+
+  // casting `data` value
+  var getUserData = (jsonObject as Map<String, dynamic>)['data'];
+
+  // return value
+  return UserModel.createUser(getUserData);
+}
+```
+
+dapat kita lihat bahwa response dari API nya
+
+```json
+{
+    "data": {
+        "id": 2,
+        "email": "janet.weaver@reqres.in",
+        "first_name": "Janet",
+        "last_name": "Weaver",
+        "avatar": "https://reqres.in/img/faces/2-image.jpg"
+    },
+    "support": {
+        "url": "https://reqres.in/#support-heading",
+        "text": "To keep ReqRes free, contributions towards server costs are appreciated!"
+    }
+}
+```
+
+dimana `data` ada object lagi maka perlu kita casting seperti ini
+
+```dart
+// casting `data` value
+var getUserData = (jsonObject as Map<String, dynamic>)['data'];
+
+// return value
+return UserModel.createUser(getUserData);
+```
+
+kemudian di return maka si user Model akan dapat seperti ini
+
+```json
+"data": {
+        "id": 2,
+        "email": "janet.weaver@reqres.in",
+        "first_name": "Janet",
+        "last_name": "Weaver",
+        "avatar": "https://reqres.in/img/faces/2-image.jpg"
+},
+```
+
+lengkapnya
+
+```dart
+import 'dart:convert';
+
+import 'package:http/http.dart' as http;
+
+class UserModel {
+  final String? id;
+  final String? name;
+
+  // constructor
+  UserModel({this.id, this.name});
+
+  // factory method
+  factory UserModel.createUser(Map<String, dynamic> object) {
+    return UserModel(
+        id: object['id'].toString(),
+        name: object['first_name'] + ' ' + object['last_name']);
+  }
+
+  // get json object and store to model method
+  static Future<UserModel> connectToAPI(String id) async {
+    // API URL
+    String apiURL = "https://reqres.in/api/users/" + id;
+    var getResult = await http.get(Uri.parse(apiURL));
+    var jsonObject = json.decode(getResult.body);
+
+    // casting `data` value
+    var getUserData = (jsonObject as Map<String, dynamic>)['data'];
+
+    // return value
+    return UserModel.createUser(getUserData);
+  }
+}
+
+```
+
+kemudian kita terapkan di main seperti ini
+
+```dart
+class _MyAppState extends State<MyApp> {
+  // call model
+  PostResult? postResult;
+  UserModel? userModel;
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text("Latihan API"),
+        ),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Text((userModel != null)
+                  ? userModel!.id.toString() +
+                      ' | ' +
+                      userModel!.name.toString() +
+                      ' | ' +
+                      postResult!.job.toString() +
+                      ' | ' +
+                      postResult!.created.toString()
+                  : 'tidak ada tdata'),
+              RaisedButton(
+                onPressed: () {
+                  UserModel.connectToAPI('feri')
+                      .then((value) => userModel = value);
+                  setState(() {});
+                },
+                child: Text("GET"),
+```
+
+lengkapnya seperti ini
+
+```dart
+import 'package:flutter/material.dart';
+import 'package:simple_api/post_result_model.dart';
+import 'package:simple_api/user_model.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatefulWidget {
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  // call model
+  PostResult? postResult;
+  UserModel? userModel;
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text("Latihan API"),
+        ),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Text((userModel != null)
+                  ? userModel!.id.toString() +
+                      ' | ' +
+                      userModel!.name.toString()
+                  : 'tidak ada data'),
+              RaisedButton(
+                onPressed: () {
+                  UserModel.connectToAPI('1')
+                      .then((value) => userModel = value);
+                  setState(() {});
+                },
+                child: Text("GET"),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+```
+
+maka hasilnya
+
+![get method](docs/img/get.png)
 
 
 ###### Package yang digunakan
