@@ -29,4 +29,20 @@ class UserModel {
     // return value
     return UserModel.createUser(getUserData);
   }
+
+  // method for get List of Users
+  static Future<List<UserModel>> getUsers(String page) async {
+    String apiUrl = "https://reqres.in/api/users?page=" + page;
+    var getApiResult = await http.get(Uri.parse(apiUrl));
+    var jsonObject = json.decode(getApiResult.body);
+
+    // casting map on data
+    List<dynamic> listUser = (jsonObject as Map<String, dynamic>)['data'];
+
+    // getting list of users
+    List<UserModel> users = [];
+    for (int i = 0; i < listUser.length; i++)
+      users.add(UserModel.createUser(listUser[i]));
+    return users;
+  }
 }

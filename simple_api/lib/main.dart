@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:simple_api/post_result_model.dart';
 import 'package:simple_api/user_model.dart';
 
 void main() {
@@ -13,8 +12,10 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   // call model
-  PostResult? postResult;
   UserModel? userModel;
+
+  // model process initialize
+  String output = "tidak ada data";
 
   @override
   Widget build(BuildContext context) {
@@ -27,16 +28,15 @@ class _MyAppState extends State<MyApp> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Text((userModel != null)
-                  ? userModel!.id.toString() +
-                      ' | ' +
-                      userModel!.name.toString()
-                  : 'tidak ada data'),
+              Text(output),
               RaisedButton(
                 onPressed: () {
-                  UserModel.connectToAPI('1')
-                      .then((value) => userModel = value);
-                  setState(() {});
+                  UserModel.getUsers('1').then((users) {
+                    output = '';
+                    for (int i= 0; i < users.length; i++)
+                      output = output + "[ " + users[i].name.toString() + " ] ";
+                    setState(() {});
+                  });
                 },
                 child: Text("GET"),
               ),
