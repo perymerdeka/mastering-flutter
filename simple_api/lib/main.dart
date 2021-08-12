@@ -29,7 +29,7 @@ class _MyAppState extends State<MyApp> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Text(output),
-              RaisedButton(
+              ElevatedButton(
                 onPressed: () {
                   UserModel.getUsers('1').then((users) {
                     output = '';

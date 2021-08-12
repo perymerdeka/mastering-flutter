@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
           title: Text("Latihan Row dan Column"),
         ),
         body: Row(
-          mainAxisAlignment: ,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [Text("Widget 1"), Text("widget 2"), Text("Widget 3")],
         ),
       ),
