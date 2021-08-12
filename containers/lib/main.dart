@@ -33,14 +33,14 @@ class Home extends StatelessWidget {
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(30),
               gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: <Color>[
-            Colors.white,
-            Colors.blue,
-            Colors.orangeAccent,
-            Colors.amber
-          ])),
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: <Color>[
+                    Colors.white,
+                    Colors.blue,
+                    Colors.orangeAccent,
+                    Colors.amber
+                  ])),
         ),
       ),
     );
