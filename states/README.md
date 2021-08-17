@@ -1,6 +1,6 @@
 ## Stateful vs Stateless Widget
 
-dalam flutter terdapat beberapa widget dasar seperti `Stateless Widget` dan `Stateefull Widget` berikut bahasan nya 
+dalam flutter terdapat beberapa widget dasar seperti `Stateless Widget` dan `Statefull Widget` berikut bahasan nya 
 
 
 ### Stateless Widget
