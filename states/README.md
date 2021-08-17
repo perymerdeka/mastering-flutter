@@ -136,3 +136,22 @@ hasilnya seoerti ini
 
 
 ![contoh stateful widget](docs/stf.png)
+
+### State Management
+
+dalam penggunaan `stateful widget` kita akan merender ulang semua widget dalam satu page
+kekuranganya aplikasi akan memakan banyak memory akibatnya aplikasi akan menjadi berat, cara mengatasinya menggunakan `State Management` dimana fungsi `State Management` adalah mengubah/SetState widget yang perlu diubah saja tidak perlu render semuanya
+
+#### Jenis State Management
+
+berikut beberapa state management yang banyak digunakan
+
+* [provider](https://pub.dev/packages/provider) -> [sample](https://flutter.dev/docs/development/data-and-backend/state-mgmt/simple)
+* [BloC](https://pub.dev/packages/flutter_bloc)
+* [GetX](https://pub.dev/packages/get)
+
+itu dia penjelasan singkat mengenai stateless dan statefull widget dan contoh state management
+
+---
+
+[Container Widget](../containers/README.md) <> [Visible dan Invisible Widget]()
