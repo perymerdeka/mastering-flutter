@@ -26,6 +26,7 @@ sebelum mempelajari Flutter pastikan sudah belajar OOP dengan Dart
 #### Flutter
 
 * Channel youtube : https://www.youtube.com/user/kh3w4nx1ng
+* Channel Youtube (Kuldii Project) : https://www.youtube.com/channel/UCOIXRIEDrW4LbyCPZQZ4WTA
 * Dokumentasi Flutter: https://flutter.dev/docs
 * Komunitas flutter (telegram): https://t.me/flutter_id
 * Artikel update: https://t.me/flutterDev 
