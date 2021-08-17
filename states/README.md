@@ -107,7 +107,7 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 ```
 
-lalu dalam main kita coba iport
+lalu dalam main kita coba import
 
 ```dart
 import 'package:flutter/material.dart';
