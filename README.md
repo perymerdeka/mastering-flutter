@@ -18,6 +18,7 @@ sebelum mempelajari Flutter pastikan sudah belajar OOP dengan Dart
 4. [Row dan Column](row_column/README.md)
 5. [Container Widget](containers/README.md)
 6. [Stateless vs Statefull Widget](states/README.md)
+7. [Visible dan Invisible Widget](visible_invisible_widget/README.md)
 
 ## Referensi dan Sumber Belajar
 
