@@ -1,5 +1,30 @@
 import 'package:flutter/material.dart';
 
+/// List of Widget
+List<Widget> myList = [
+  Container(
+    height: 300,
+    width: 300,
+    color: Colors.red,
+  ),
+  Container(
+    height: 300,
+    width: 300,
+    color: Colors.blue,
+  ),
+  Container(
+    height: 300,
+    width: 300,
+    color: Colors.green,
+  ),
+  Container(
+    height: 300,
+    width: 300,
+    color: Colors.amber,
+  ),
+  Text('Ini adalah Text')
+];
+
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
 
@@ -10,29 +35,8 @@ class Home extends StatelessWidget {
         title: Text('Latihan ListView'),
       ),
       body: ListView(
-        scrollDirection: Axis.horizontal,
-        children: [
-          Container(
-            height: 300,
-            width: 300,
-            color: Colors.red,
-          ),
-          Container(
-            height: 300,
-            width: 300,
-            color: Colors.blue,
-          ),
-          Container(
-            height: 300,
-            width: 300,
-            color: Colors.green,
-          ),
-          Container(
-            height: 300,
-            width: 300,
-            color: Colors.amber,
-          )
-        ],
+        scrollDirection: Axis.vertical,
+        children: myList,
       ),
     );
   }

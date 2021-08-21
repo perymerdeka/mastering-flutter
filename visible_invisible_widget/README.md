@@ -86,5 +86,5 @@ hasilnya seperti ini
 ![widget stack](docs/stack.png)
 
 ---
-[Statefull vs Stateless](../states/README.md)  <> [List View]()
+[Statefull vs Stateless](../states/README.md)  <> [List View](../lists/README.md)
 
