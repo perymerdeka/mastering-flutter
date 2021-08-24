@@ -20,6 +20,7 @@ sebelum mempelajari Flutter pastikan sudah belajar OOP dengan Dart
 6. [Stateless vs Statefull Widget](states/README.md)
 7. [Visible dan Invisible Widget](visible_invisible_widget/README.md)
 8. [ListView dan ListView.builder](lists/README.md)
+9. [ListTile Widget](list_tiles/README.md)
 
 ## Referensi dan Sumber Belajar
 
