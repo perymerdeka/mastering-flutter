@@ -21,6 +21,7 @@ sebelum mempelajari Flutter pastikan sudah belajar OOP dengan Dart
 7. [Visible dan Invisible Widget](visible_invisible_widget/README.md)
 8. [ListView dan ListView.builder](lists/README.md)
 9. [ListTile Widget](list_tiles/README.md)
+10. [Extract Widget](ext_widget/README.md)
 
 ## Referensi dan Sumber Belajar
 
