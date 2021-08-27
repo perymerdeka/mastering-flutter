@@ -112,4 +112,4 @@ plugin ini berfungsi untuk menampilkan fake data seperti nama, alamat dan lain n
 
 ---
 
-[List Tile Widget](../list_tiles/README.md) <> [Penggunaan Statefull Widget]()
+[List Tile Widget](../list_tiles/README.md) <> [Penggunaan Statefull Widget](../stateful_sample/README.md)
