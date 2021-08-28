@@ -59,4 +59,4 @@ outputnya seperti ini
 
 
 ---
-[Extract Widget](../ext_widget/README.md) <> [Mapping List]()
+[Extract Widget](../ext_widget/README.md) <> [Mapping List](../mapping/README.md)

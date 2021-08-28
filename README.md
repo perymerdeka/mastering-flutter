@@ -23,6 +23,7 @@ sebelum mempelajari Flutter pastikan sudah belajar OOP dengan Dart
 9. [ListTile Widget](list_tiles/README.md)
 10. [Extract Widget](ext_widget/README.md)
 11. [Contoh Penggunaan Statefull](stateful_sample/README.md)
+12. [Mapping List](mapping/README.md)
 
 ## Referensi dan Sumber Belajar
 
