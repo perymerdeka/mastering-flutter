@@ -267,4 +267,4 @@ hasilnya
 
 ---
 
-[Penggunaan Statefull](../stateful_sample/README.md) <> [Date Format]()
+[Penggunaan Statefull](../stateful_sample/README.md) <> [Date Format](../date_formater/README.md)

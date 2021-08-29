@@ -24,6 +24,7 @@ sebelum mempelajari Flutter pastikan sudah belajar OOP dengan Dart
 10. [Extract Widget](ext_widget/README.md)
 11. [Contoh Penggunaan Statefull](stateful_sample/README.md)
 12. [Mapping List](mapping/README.md)
+13. [DateTime Format](date_formater/README.md)
 
 ## Referensi dan Sumber Belajar
 
