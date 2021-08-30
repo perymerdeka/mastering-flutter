@@ -9,4 +9,4 @@
 
 ---
 
-[Date Format](../date_formater/README.md) <> [TabBar]()
+[Date Format](../date_formater/README.md) <> [TabBar](../tabs/README.md)
