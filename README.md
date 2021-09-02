@@ -27,6 +27,8 @@ sebelum mempelajari Flutter pastikan sudah belajar OOP dengan Dart
 13. [DateTime Format](date_formater/README.md)
 14. [AppBar](app_bars/README.md)
 15. [TabBar](tabs/README.md)
+16. [TextField]() <- Undone
+17. [Grid View](grid_view/README.md)
 
 ## Referensi dan Sumber Belajar
 
