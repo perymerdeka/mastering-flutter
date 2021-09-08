@@ -29,6 +29,7 @@ sebelum mempelajari Flutter pastikan sudah belajar OOP dengan Dart
 15. [TabBar](tabs/README.md)
 16. [TextField]() <- Undone
 17. [Grid View](grid_view/README.md)
+18. [Dialog Widget](dialogs/README.md)
 
 ## Referensi dan Sumber Belajar
 
