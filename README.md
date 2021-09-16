@@ -31,6 +31,9 @@ sebelum mempelajari Flutter pastikan sudah belajar OOP dengan Dart
 17. [Grid View](grid_view/README.md)
 18. [Dialog Widget](dialogs/README.md)
 
+**Upgrade Flutter 2.5 (Stable)**
+19. [Dismisible Widget](dismissibles/README.md)
+
 ## Referensi dan Sumber Belajar
 
 
