@@ -34,7 +34,11 @@ sebelum mempelajari Flutter pastikan sudah belajar OOP dengan Dart
 **Upgrade Flutter 2.5 (Stable)**
 
 19. [Dismisible Widget](dismissibles/README.md)
+
+### Navigasi
+
 20. [Flutter Navigation](nav/README.md)
+21. [Named Navigation](nav_named/READMR.md)
 
 ## Referensi dan Sumber Belajar
 
