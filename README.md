@@ -53,3 +53,7 @@ sebelum mempelajari Flutter pastikan sudah belajar OOP dengan Dart
 * Forum Diskusi: https://github.com/flutter/flutter
 * Medium Publisher: https://medium.com/flutter-community
 * [Material Desain Dokumentasi](https://material.io/)
+
+### Learning Path
+
+[roadmap Belajar](roadmap/learning_path.md)
