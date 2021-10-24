@@ -27,6 +27,18 @@ class ProductDetailScreen extends StatelessWidget {
                 image: DecorationImage(
                     image: NetworkImage(product.imageUrl), fit: BoxFit.cover)),
           ),
+          Center(
+            child: Column(
+              children: [
+                Text(product.title),
+                const SizedBox(
+                  height: 10,
+                ),
+                Text('\$${product.price}'),
+                Text(product.description)
+              ],
+            ),
+          )
         ],
       ),
     );
