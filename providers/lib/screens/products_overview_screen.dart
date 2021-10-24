@@ -1,24 +1,8 @@
-import 'dart:math';
 import 'package:flutter/material.dart';
-
-import '../models/product.dart';
-import '../widgets/product_item.dart';
+import 'package:providers/widgets/product_grid.dart';
 
 class ProductsOverviewScreen extends StatelessWidget {
-  final List<Product> loadedProducts = List.generate(
-    25,
-    (index) {
-      return Product(
-        id: "id_${index + 1}",
-        title: "Product ${index + 1}",
-        description: 'Ini adalah deskripsi produk ${index + 1}',
-        price: 10 + Random().nextInt(100).toDouble(),
-        imageUrl: 'https://picsum.photos/id/$index/200/300',
-      );
-    },
-  );
-
-  ProductsOverviewScreen({Key? key}) : super(key: key);
+  const ProductsOverviewScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -26,21 +10,7 @@ class ProductsOverviewScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('MyShop'),
       ),
-      body: GridView.builder(
-        padding: const EdgeInsets.all(10.0),
-        itemCount: loadedProducts.length,
-        itemBuilder: (ctx, i) => ProductItem(
-          loadedProducts[i].id,
-          loadedProducts[i].title,
-          loadedProducts[i].imageUrl,
-        ),
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2,
-          childAspectRatio: 3 / 2,
-          crossAxisSpacing: 10,
-          mainAxisSpacing: 10,
-        ),
-      ),
+      body: const ProductGrid(),
     );
   }
 }

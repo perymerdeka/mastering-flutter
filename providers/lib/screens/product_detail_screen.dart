@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:providers/providers/products.dart';
 
 class ProductDetailScreen extends StatelessWidget {
-  // final String title;
-  // final double price;
-
-  // ProductDetailScreen(this.title, this.price);
   static const routeName = '/product-detail';
 
   const ProductDetailScreen({Key? key}) : super(key: key);
@@ -13,13 +11,23 @@ class ProductDetailScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final productId =
         ModalRoute.of(context)!.settings.arguments as String; // is the id!
-    // ...
+
+    // Provider
+    final product = Provider.of<ProductProvider>(context).findById(productId);
+
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Product Details'),
+        title: Text(product.title),
       ),
-      body: Center(
-        child: Text("INI ADALAG PAGE PRODUK ($productId)"),
+      body: Column(
+        children: [
+          Container(
+            height: MediaQuery.of(context).size.height / 2,
+            decoration: BoxDecoration(
+                image: DecorationImage(
+                    image: NetworkImage(product.imageUrl), fit: BoxFit.cover)),
+          ),
+        ],
       ),
     );
   }
