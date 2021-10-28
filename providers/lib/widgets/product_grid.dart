@@ -7,13 +7,10 @@ import 'package:providers/widgets/product_item.dart';
 class ProductGrid extends StatelessWidget {
   const ProductGrid({
     Key? key,
-  
   }) : super(key: key);
-
 
   @override
   Widget build(BuildContext context) {
-
     // Provider
     final ProductProvider productData = Provider.of<ProductProvider>(context);
 
