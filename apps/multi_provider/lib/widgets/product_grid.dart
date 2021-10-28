@@ -9,7 +9,7 @@ class ProductGrid extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final productData = Provider.of<Products>(context);
+    final Products productData = Provider.of<Products>(context);
 
     final allproduct = productData.allproducts;
 
