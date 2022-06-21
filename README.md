@@ -15,30 +15,30 @@ sebelum mempelajari Flutter pastikan sudah belajar OOP dengan Dart
 ### Widget Dasar
 
 3. [Text Widget]()
-4. [Row dan Column](row_column/README.md)
-5. [Container Widget](containers/README.md)
-6. [Stateless vs Statefull Widget](states/README.md)
+4. [Row dan Column](apps/row_column/README.md)
+5. [Container Widget](apps/containers/README.md)
+6. [Stateless vs Statefull Widget](apps/states/README.md)
 7. [Visible dan Invisible Widget](visible_invisible_widget/README.md)
-8. [ListView dan ListView.builder](lists/README.md)
-9. [ListTile Widget](list_tiles/README.md)
-10. [Extract Widget](ext_widget/README.md)
-11. [Contoh Penggunaan Statefull](stateful_sample/README.md)
-12. [Mapping List](mapping/README.md)
-13. [DateTime Format](date_formater/README.md)
-14. [AppBar](app_bars/README.md)
-15. [TabBar](tabs/README.md)
+8. [ListView dan ListView.builder](apps/lists/README.md)
+9. [ListTile Widget](apps/list_tiles/README.md)
+10. [Extract Widget](apps/ext_widget/README.md)
+11. [Contoh Penggunaan Statefull](apps/stateful_sample/README.md)
+12. [Mapping List](apps/mapping/README.md)
+13. [DateTime Format](apps/date_formater/README.md)
+14. [AppBar](apps/app_bars/README.md)
+15. [TabBar](apps/tabs/README.md)
 16. [TextField]() <- Undone
-17. [Grid View](grid_view/README.md)
-18. [Dialog Widget](dialogs/README.md)
+17. [Grid View](apps/grid_view/README.md)
+18. [Dialog Widget](apps/dialogs/README.md)
 
 **Upgrade Flutter 2.5 (Stable)**
 
-19. [Dismisible Widget](dismissibles/README.md)
+19. [Dismisible Widget](apps/dismissibles/README.md)
 
 ### Navigasi
 
-20. [Flutter Navigation](nav/README.md)
-21. [Named Navigation](nav_named/READMR.md)
+20. [Flutter Navigation](apps/nav/README.md)
+21. [Named Navigation](apps/nav_named/READMR.md)
 
 ## Referensi dan Sumber Belajar
 
